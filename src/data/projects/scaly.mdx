@@ -1,0 +1,76 @@
+---
+title: 'Scaly'
+description: 'A production-grade scalable URL shortener built in Go with distributed system components like Redis and Kafka, featuring analytics, rate limiting, and QR generation.'
+image: '/project/scaly.png'
+technologies:
+  ['Golang', 'Fiber', 'Redis', 'Kafka', 'Goroutines', 'REST API', 'Docker', 'Server Architecture']
+github: 'https://github.com/rishabhpandey106/scaly'
+live: ''
+timeline: 'In Process'
+role: 'Backend Developer'
+team: 'Solo'
+status: 'In Development'
+featured: true
+challenges:
+  ['Scalable ID Generation', 'Concurrency Handling with Goroutines', 'Rate Limiting Strategy', 'Event-driven Architecture with Kafka', 'Low-latency URL Resolution']
+learnings: ['Distributed Systems Basics', 'Concurrency in Go', 'Event Streaming with Kafka', 'Caching Strategies using Redis', 'Backend Scalability Patterns']
+isPublished: true
+---
+
+## Overview
+
+**Scaly** is a high-performance URL shortener service designed with scalability and production-readiness in mind. Built using Go and the Fiber framework, the system handles URL shortening, redirection, analytics, and QR code generation efficiently.
+
+The architecture leverages Redis for fast data access and ID generation, and Kafka for event-driven processing such as click tracking and analytics. Concurrency is handled using Go routines and worker patterns to ensure high throughput and low latency.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **URL Shortening**: Convert long URLs into compact, shareable links  
+- **QR Code Generation**: Automatically generate QR codes for shortened URLs  
+- **Fast Redirection**: Optimized lookup using Redis for low latency  
+- **Click Analytics**: Track clicks, user behavior, and usage metrics  
+- **Rate Limiting**: IP/user-based request limiting to prevent abuse  
+- **Authentication**: Secure endpoints with user-based access control  
+- **Scalable ID Generation**: Redis-based counter system for unique IDs  
+
+### **System & Architecture**
+
+- **Event-driven Design**: Kafka used for async processing (click tracking, analytics)  
+- **Concurrency Model**: Goroutines and worker pools for handling high traffic  
+- **Caching Layer**: Redis for ultra-fast reads and writes  
+- **Lightweight Framework**: Fiber for high-performance HTTP handling  
+
+## System Flow
+
+1. **User Request** → Submit long URL  
+2. **ID Generation** → Redis counter generates unique ID  
+3. **Short URL Creation** → Stored in Redis/database  
+4. **QR Generation** → Optional QR code created  
+5. **Redirection** → Fast lookup and redirect  
+6. **Event Logging** → Kafka queues click events  
+7. **Analytics Processing** → Workers process events asynchronously  
+
+## API Endpoints
+
+### **Core Endpoints**
+
+```go
+// Create short URL
+POST /api/v1/shorten - Generate short link
+
+// Create QR code
+POST /api/v1/qr - Generate QR code
+POST /api/v1/qr/:code - Generate QR code via shorturl code
+
+// Redirect
+GET /api/v1/:code - Redirect to original URL
+
+// Analytics
+GET /api/v1/analytics/:id - Fetch click data
+
+// Auth
+POST /api/v1/signup - User authentication
+POST /api/v1/login - User Logins
+POST /api/v1/logout - User Logouts

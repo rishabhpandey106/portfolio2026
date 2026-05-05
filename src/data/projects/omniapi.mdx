@@ -1,0 +1,47 @@
+---
+title: 'Omni API'
+description: 'A high-performance, low-latency search API built on Cloudflare Workers, designed to demonstrate ultra-fast data retrieval using Redis and PostgreSQL.'
+image: '/project/omniapi.png'
+technologies:
+  ['TypeScript', 'Hono', 'Cloudflare Workers', 'Upstash Redis', 'Neon DB (PostgreSQL)', 'Prisma ORM', 'Serverless']
+github: 'https://github.com/rishabhpandey106/omni-api'
+live: 'omni-api-lac.vercel.app'
+timeline: '2-3 Days'
+role: 'Backend Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Reducing API Latency', 'Optimizing Query Performance', 'Serverless Constraints (Cold Starts)', 'Efficient Data Retrieval Strategy']
+learnings: ['Edge Computing with Cloudflare Workers', 'Caching Strategies with Redis', 'Database Query Optimization', 'Serverless API Design']
+isPublished: true
+---
+
+## Overview
+
+**Omni API** is a high-performance search API built to demonstrate ultra-fast query processing using modern serverless and edge computing technologies. The system is optimized for minimal latency by leveraging **Cloudflare Workers (edge runtime)** along with Redis caching and PostgreSQL queries.
+
+It provides multiple search strategies to compare performance across caching and database layers.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Ultra-fast Search API**: Optimized for low-latency responses  
+- **Dual Data Sources**:
+  - ⚡ **Redis (Upstash)** → Fast cached responses  
+  - 🗄️ **PostgreSQL (Neon DB)** → Persistent data queries  
+- **Edge Deployment**: Runs on Cloudflare Workers for global speed  
+- **Minimal Latency**: Designed for fast response times  
+- **Scalable Architecture**: Serverless and horizontally scalable  
+
+## API Endpoints
+
+### **Search Endpoints**
+
+```ts
+// Redis-based fast search
+GET /api/search?t=query
+
+// PostgreSQL-based search
+GET /api/search/psql?t=query

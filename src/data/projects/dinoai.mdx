@@ -1,0 +1,72 @@
+---
+title: 'DinoAI'
+description: 'A reinforcement learning project that trains an AI agent to play the Chrome Dino game using Deep Q-Networks (DQN), improving performance through interaction-based learning.'
+image: '/project/dinoai.png'
+technologies:
+  ['Python', 'TensorFlow', 'Deep Q-Learning (DQN)', 'OpenCV', 'Reinforcement Learning', 'NumPy']
+github: 'https://github.com/rishabhpandey106/dinoAI'
+live: ''
+timeline: '3-5 Days'
+role: 'ML Engineer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Low FPS Training Constraints', 'State Representation from Game Frames', 'Reward Function Design', 'Balancing Exploration vs Exploitation']
+learnings: ['Reinforcement Learning Fundamentals', 'Deep Q-Network Implementation', 'Game State Processing using OpenCV', 'Model Optimization Techniques']
+isPublished: true
+---
+
+## Overview
+
+**DinoAI** is a reinforcement learning project where an AI agent learns to play the Chrome Dino game using **Deep Q-Networks (DQN)**. Instead of relying on hardcoded logic, the agent learns optimal actions (jump, duck, or idle) through continuous interaction with the game environment.
+
+The project demonstrates how neural networks can be used for decision-making in dynamic environments by maximizing rewards over time.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **DQN-based Learning**: Uses Deep Q-Learning for decision making  
+- **Game Frame Processing**: Captures and processes screen frames  
+- **Action Prediction**: Decides between jump, duck, or no action  
+- **Reward System**: Encourages longer survival and better timing  
+- **Two Versions**:
+  - **Basic Model** (~1 FPS): Initial implementation  
+  - **Optimized Model** (3–4 FPS): Improved accuracy and smoother decisions  
+- **Adaptive Behavior**: Learns obstacle patterns over time  
+
+## How It Works
+
+1. **Frame Capture** → Game screen captured in real-time  
+2. **State Processing** → Frames converted into model input  
+3. **Action Selection** → Model predicts best action  
+4. **Environment Interaction** → Executes action in game  
+5. **Reward Feedback** → Positive reward for survival  
+6. **Model Update** → Q-values updated using DQN  
+
+## Core Concept
+
+At the core, the agent learns an optimal policy using Q-learning.
+
+This helps the model estimate the best action based on expected future rewards.
+
+## Use Cases
+
+- Reinforcement learning experimentation  
+- Game AI development  
+- Understanding agent-based learning systems  
+- Educational ML projects  
+
+## Performance Comparison
+
+-  Basic Model  -->  ~1 FPS  -->  Slower, less accurate        
+-  Optimized Model  -->  3–4 FPS  -->  Better precision, smoother   
+
+## Future Improvements
+
+- Increase FPS using better optimization  
+- Use CNNs for improved visual feature extraction  
+- Hyperparameter tuning (epsilon decay, learning rate)  
+- Experience replay optimization  
+- Deploy as interactive demo  

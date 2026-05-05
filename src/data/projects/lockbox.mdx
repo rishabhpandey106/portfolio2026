@@ -1,0 +1,66 @@
+---
+title: 'LockBox'
+description: 'A secure browser extension password vault that stores encrypted credentials in MongoDB, with client-side encryption and a zero-knowledge master key approach.'
+image: '/project/lockbox.png'
+technologies:
+  ['JavaScript', 'HTML', 'CSS', 'Browser Extension API', 'MongoDB', 'Encryption']
+github: 'https://github.com/rishabhpandey106/lockbox'
+live: ''
+timeline: '2-3 Days'
+role: 'Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Client-side Encryption Design', 'Secure Key Handling', 'Encrypted Data Persistence in DB', 'Zero-Knowledge Architecture']
+learnings: ['Encryption', 'Secure Storage over Remote DB', 'Zero-Knowledge Systems', 'Browser Extension Development']
+isPublished: true
+---
+
+## Overview
+
+**LockBox** is a browser extension-based password manager that securely stores user credentials using **client-side encryption**. Unlike traditional vaults, all sensitive data is encrypted before being sent to the backend and stored in MongoDB.
+
+The system follows a **zero-knowledge architecture**, meaning the server never has access to the master key or decrypted data — ensuring only the user can access their credentials.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Password Vault**: Securely store credentials  
+- **Client-side Encryption**: Encrypt before sending to backend  
+- **MongoDB Storage**: Persistent storage of encrypted data  
+- **Master Key Access**: Only user can decrypt data  
+- **Zero-Knowledge Security**: Server cannot read user data  
+- **Browser Extension UI**  
+
+## Security Model
+
+- **Encryption (Client-side)** → Data encrypted in browser before API call  
+- **Master Key** → Never stored on server  
+- **Database Storage** → Only encrypted blobs stored in MongoDB  
+- **Zero Knowledge** → Backend cannot decrypt user data  
+
+## How It Works
+
+1. **User Inputs Credentials**  
+2. **Encryption Layer (Client-side)** → Uses master key  
+3. **Send to Backend** → Only encrypted data transmitted  
+4. **Storage (MongoDB)** → Stored as encrypted payload  
+5. **Access Flow** → User provides master key  
+6. **Decryption (Client-side)** → Happens only in browser  
+
+## Use Cases
+
+- Secure password management  
+- Privacy-first credential storage  
+- Cross-device access with encryption  
+- Lightweight password vault  
+
+## Future Improvements
+
+- Secure key derivation (PBKDF2 / Argon2)  
+- End-to-end encryption audit  
+- Auto-fill extension support  
+- Multi-device sync improvements  
+- Backup & recovery (securely encrypted)  

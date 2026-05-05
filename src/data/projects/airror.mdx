@@ -1,0 +1,48 @@
+---
+title: 'Airror'
+description: 'A CLI-based AI code debugger that analyzes errors directly from codebases and provides root cause, explanation, and fixes using a vectorless retrieval approach.'
+image: '/project/airror.png'
+technologies:
+  ['Python', 'CLI', 'LLM', 'Vectorless Retrieval', 'AST Parsing', 'Code Analysis', 'NLP']
+github: 'https://github.com/rishabhpandey106/airror'
+live: ''
+timeline: '2-3 Days'
+role: 'AI/Backend Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Error Context Extraction from Codebase', 'Accurate Root Cause Detection', 'Vectorless Retrieval Design', 'Handling Diverse Error Types', 'CLI UX Design']
+learnings: ['Code Understanding using LLMs', 'AST-based Parsing', 'Prompt Engineering for Debugging', 'Context Injection without Vector DB', 'Developer Tooling Design']
+isPublished: true
+---
+
+## Overview
+
+**Airror** is a CLI-based AI debugging tool that helps developers identify, understand, and fix errors directly from their codebase. Instead of relying on vector databases, it uses a **vectorless retrieval approach** to extract relevant context and provide precise debugging insights.
+
+The tool analyzes code, detects the origin of errors, and returns structured outputs including the root cause, explanation, and suggested fixes — all within the terminal.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **AI Code Debugging**: Analyze errors and provide fixes in real-time  
+- **Root Cause Detection**: Identify where and why the error occurred  
+- **Codebase Awareness**: Understand project-level context, not just single files  
+- **Vectorless Retrieval**: Efficient context extraction without embeddings  
+- **CLI Tooling**: Lightweight and developer-friendly interface  
+- **Detailed Explanations**: Clear breakdown of issues and solutions  
+
+## How It Works
+
+1. **Error Input** → Developer provides error/log or stack trace  
+2. **Code Parsing** → Relevant files and context extracted (AST / pattern-based)  
+3. **Context Building** → Important snippets selected without vector DB  
+4. **LLM Processing** → Model analyzes error + context  
+5. **Output Generation** → Returns cause, explanation, and fix  
+
+## Example Workflow
+
+```bash
+$ debug-search "TypeError: undefined is not a function"

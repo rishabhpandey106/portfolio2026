@@ -1,0 +1,61 @@
+---
+title: 'Ragdoll'
+description: 'AI-powered website chat interface that enables users to interact with any website using natural language queries.'
+image: '/project/ragdoll.png'
+technologies:
+  ['Next.js', 'TypeScript', 'LLM', 'Upstash Vector', 'Embeddings', 'Web Scraping', 'Vercel', 'Serverless', 'REST API']
+github: 'https://github.com/rishabhpandey106/ragdoll'
+live: 'https://ragdoll-six.vercel.app/'
+timeline: '2-3 Days'
+role: 'Full Stack Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Website Parsing & Content Extraction', 'Chunking Strategy', 'Vector Search Accuracy', 'Latency Optimization', 'Serverless Constraints']
+learnings: ['RAG Architecture', 'Vector Database Integration', 'Prompt Engineering', 'Context Retrieval Optimization', 'Fullstack AI Systems']
+isPublished: true
+---
+
+## Overview
+
+**Ragdoll** is an AI-powered web application that converts any website into an interactive chatbot. Users can simply provide a URL, and the system allows them to ask questions related to that website's content.
+
+The application uses a Retrieval-Augmented Generation (RAG) approach where website data is extracted, processed, embedded, and stored in a vector database. Relevant context is then retrieved dynamically to generate accurate answers.
+
+Built entirely using Next.js with serverless APIs, the system ensures fast performance and easy deployment.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Chat with Any Website**: Turn any URL into a conversational interface  
+- **Context-Aware Answers**: Responses generated from actual website data  
+- **RAG Pipeline**: Combines retrieval and LLM generation  
+- **Semantic Search**: Uses embeddings with vector database  
+- **Dynamic Chunking**: Efficient content splitting for better retrieval  
+- **Real-time Chat**: Fast and responsive interaction  
+- **Serverless Architecture**: Scalable and easy deployment  
+
+## System Flow
+
+1. **URL Input** → User provides website link  
+2. **Scraping & Parsing** → Extract meaningful text from webpage  
+3. **Chunking** → Split content into smaller segments  
+4. **Embedding Generation** → Convert chunks into vectors  
+5. **Storage** → Save embeddings in vector DB (Upstash)  
+6. **Query Processing** → User asks a question  
+7. **Vector Search** → Retrieve relevant chunks  
+8. **LLM Response** → Generate final answer  
+
+## API Endpoints
+
+### **Core Endpoints**
+
+```typescript
+
+// Chat endpoint
+POST /api/chat-stream - Ask questions based on indexed website
+
+// Health check
+GET /api/health - Check API status

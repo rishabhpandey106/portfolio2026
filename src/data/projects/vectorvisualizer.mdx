@@ -1,0 +1,61 @@
+---
+title: 'Vector Visualizer'
+description: 'An NLP-based interactive tool to explore word embeddings, solve analogies, and visualize vector relationships in 2D space.'
+image: '/project/vectorvisualizer.png'
+technologies:
+  ['Python', 'FastAPI', 'Next.js', 'Word Embeddings', 'Redis', 'NLP', 'LLM', 'Vercel', 'Serverless']
+github: 'https://github.com/rishabhpandey106/vectorvisualizer'
+live: 'https://vectorvisualizer.vercel.app'
+timeline: '2-3 Days'
+role: 'Full Stack Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Vector Arithmetic Accuracy', 'Efficient Similarity Search', '2D Projection of High-Dimensional Data', 'Caching Optimization', 'Real-time Response Handling']
+learnings: ['Word Embeddings & Vector Math', 'Semantic Relationships in NLP', 'FastAPI Optimization', 'Frontend Visualization Techniques', 'Caching with Redis']
+isPublished: true
+---
+
+## Overview
+
+**Vector Visualizer** is an interactive NLP tool that allows users to explore relationships between words using vector embeddings. It supports analogy solving (e.g., *king - man + woman ≈ queen*) and visualizes word vectors in a 2D space for intuitive understanding.
+
+The backend is built with FastAPI and leverages pre-trained embedding models along with Redis caching for fast responses. The frontend, built with Next.js, provides a clean interface for interacting with vector operations in real time.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Word Analogy Solver**: Solve semantic analogies using vector arithmetic  
+- **Expression Parsing**: Supports inputs like `king - man + woman`  
+- **2D Vector Visualization**: Plot word relationships in a visual space  
+- **Word Existence Check**: Validate if a word exists in the vocabulary  
+- **Real-time Processing**: Fast responses using optimized backend + caching  
+- **Interactive UI**: Easy-to-use interface for experimentation  
+
+## Core Concept
+
+At the heart of the system is vector arithmetic on word embeddings:
+
+This allows the model to capture semantic relationships and return the closest matching word.
+
+## API Endpoints
+
+### **Core Endpoints**
+
+```python
+# Health check
+GET / - API status
+
+# Solve analogy (vector-based)
+POST /analogy - Input positive & negative word lists
+
+# Solve analogy via text expression
+POST /analogy/text - Input expression like "king - man + woman"
+
+# Check if word exists
+GET /exists?word=xyz
+
+# Visualize vectors
+POST /visualize - Plot words in 2D space

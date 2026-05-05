@@ -1,0 +1,71 @@
+---
+title: 'LipLens'
+description: 'A deep learning-based lip reading system that converts silent video input into text using computer vision and sequence modeling techniques inspired by LipNet.'
+image: '/project/liplens.png'
+technologies:
+  ['Python', 'TensorFlow', 'OpenCV', 'Streamlit', 'FFmpeg', 'Deep Learning', 'Computer Vision', 'Docker']
+github: 'https://github.com/rishabhpandey106/LipLens'
+live: ''
+timeline: '4-6 Days'
+role: 'ML Engineer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Accurate Lip Region Extraction', 'Temporal Sequence Modeling', 'Limited Dataset Size', 'Noise in Video Frames', 'Model Generalization']
+learnings: ['Computer Vision Pipelines', 'Sequence Models for Video', 'CTC-based Predictions (LipNet concept)', 'Model Deployment with Streamlit & Docker']
+isPublished: true
+---
+
+## Overview
+
+**LipLens** is a deep learning-based lip-reading application that converts silent video input into text by analyzing lip movements. Inspired by the LipNet architecture, the system uses computer vision and sequence modeling techniques to understand temporal patterns in speech without relying on audio.
+
+The application provides an interactive interface using Streamlit and supports containerized deployment using Docker.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Video-to-Text Conversion**: Predict spoken words from lip movements  
+- **Frame Extraction Pipeline**: Processes videos into sequential frames  
+- **Deep Learning Model**: Learns temporal patterns in lip motion  
+- **Streamlit UI**: Simple interface for uploading and testing videos  
+- **Docker Support**: Easy deployment and portability  
+- **Pre-trained Model Support**: Ready-to-use inference pipeline  
+
+## How It Works
+
+1. **Video Input** → User uploads video  
+2. **Frame Extraction** → FFmpeg / OpenCV processes frames  
+3. **Preprocessing** → Focus on lip region  
+4. **Model Inference** → Sequence passed through neural network  
+5. **Text Prediction** → Output generated using learned patterns  
+
+## Core Concept
+
+The model learns from sequences of frames and predicts text using sequence modeling techniques.
+
+This enables the system to map visual input (lip movements) to textual output.
+
+## Tech Highlights
+
+- **Computer Vision** → Frame extraction & lip region processing  
+- **Deep Learning** → Temporal sequence modeling (LipNet-inspired)  
+- **Inference Pipeline** → Efficient prediction from video input  
+- **Deployment** → Streamlit UI + Docker container  
+
+## Use Cases
+
+- Accessibility for hearing-impaired users  
+- Silent speech recognition systems  
+- Surveillance / low-audio environments  
+- Research in multimodal AI  
+
+## Future Improvements
+
+- Real-time lip reading (live webcam input)  
+- Larger and more diverse training datasets  
+- Improved accuracy using transformer-based models  
+- Better lip tracking and alignment  
+- Multi-language support  

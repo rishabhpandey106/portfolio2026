@@ -1,0 +1,61 @@
+---
+title: 'LogSpot'
+description: 'A lightweight Flask/Fast API extension that provides a built-in log viewer with filtering, search, download, and alerting capabilities directly from the browser.'
+image: '/project/logspot.png'
+technologies:
+  ['Python', 'Flask', 'FAST API', 'Logging', 'REST API', 'Telegram API', 'Open Source', 'PyPI']
+github: 'https://github.com/rishabhpandey106/logspot'
+live: 'https://pypi.org/project/logspot/'
+timeline: '1-2 Weeks'
+role: 'Backend Developer'
+team: 'Solo'
+status: 'Published (PyPI Package)'
+featured: true
+challenges:
+  ['Reusable Flask Extension Design', 'Efficient Log Storage & Retrieval', 'Search & Filtering Optimization', 'Secure Log Access', 'Real-time Alerting']
+learnings: ['Python Package Publishing', 'Flask Extension Architecture', 'Logging Systems Design', 'API Design for Utilities', 'Open-source Maintenance']
+isPublished: true
+---
+
+## Overview
+
+**LogSpot** is a reusable Flask extension that simplifies log monitoring by exposing a built-in `/logs` route in any Flask application. It enables developers to view, filter, search, and download logs directly from the browser without setting up external logging dashboards.
+
+Since logs may contain sensitive system data, I implemented authentication to restrict access and ensure secure observability.
+
+The extension also provides a clean logging interface attached to the Flask app instance and supports real-time alerts via Telegram for critical errors.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Instant Log Viewer**: Access logs via `/logs` route  
+- **Filtering**: Filter logs by severity (INFO, DEBUG, ERROR, etc.)  
+- **Search**: Keyword-based log search  
+- **Pagination/Limit**: Control number of log entries  
+- **Download Logs**: Export logs as `.log` file  
+- **Simple Logging API**: Direct methods like `logger.info()`  
+- **Telegram Alerts**: Notify on critical errors  
+
+## How It Works
+
+1. **Setup** → Initialize using `setup_logs(app)`  
+2. **Route Injection** → `/logs` endpoint automatically registered  
+3. **Logging Interface** → Methods attached to app instance  
+4. **Log Processing** → Store and filter logs dynamically  
+5. **Alert System** → Trigger Telegram notifications for critical logs  
+
+## Example Usage
+
+```python
+from flask import Flask
+from logspot import setup_logs
+
+app = Flask(__name__)
+
+logger = setup_logs(app, service="resbot",telegram_chat_id=OWNER_CHAT_ID, telegram_bot_token=BOT_ID, logs_user="admin", logs_pass="1234")
+
+@app.route("/")
+def index():
+    logger.info("Index page accessed")
+    return "Hello, World!"

@@ -1,0 +1,57 @@
+---
+title: 'SoulSync'
+description: 'An AI-powered Spotify playlist generator that creates personalized playlists based on user input using LLMs and real-time music data.'
+image: '/project/soulsync.png'
+technologies:
+  ['Python', 'Flask', 'React', 'Spotify API', 'Gemini API', 'LLM', 'REST API', 'Vercel']
+github: 'https://github.com/rishabhpandey106/soulsync'
+live: 'https://soulsync-sigma.vercel.app'
+timeline: '2-3 Days'
+role: 'Full Stack Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Prompt Engineering for Song Generation', 'Parsing LLM Output Reliably', 'Spotify API Integration', 'Accurate Song Matching', 'CORS & Deployment Handling']
+learnings: ['LLM Integration in Real-world Apps', 'API Orchestration', 'User-driven Personalization', 'Frontend-Backend Integration', 'Data Cleaning from AI Outputs']
+isPublished: true
+---
+
+## Overview
+
+**SoulSync** is an AI-powered playlist generator that creates personalized Spotify playlists based on user preferences such as mood, artists, or context. Instead of relying on predefined rules, it uses an LLM to dynamically generate song recommendations and maps them to real Spotify tracks.
+
+The system combines **AI-generated recommendations + Spotify API execution**, resulting in fully playable playlists created in real-time.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **AI Playlist Generation**: Generate playlists based on mood, text, or preferences  
+- **LLM Integration**: Uses Gemini to suggest relevant songs  
+- **Spotify Integration**: Automatically creates playlists in user’s account  
+- **Real-time Processing**: Instant playlist creation  
+- **Multi-source Intelligence**: Combines LLM + web search for better recommendations  
+- **Clean UI**: React-based frontend for smooth interaction  
+
+## How It Works
+
+1. **User Input** → Mood / description / artist preferences  
+2. **AI Processing** → Gemini generates song recommendations  
+3. **Web Search Agent** → Enhances recommendations with external context  
+4. **Parsing Layer** → Extracts song names & artists  
+5. **Spotify Matching** → Finds closest tracks via Spotify API  
+6. **Playlist Creation** → Creates playlist in user account  
+7. **Output** → Returns playlist link  
+
+## System Flow (Simplified)
+
+- LLM → Song Suggestions  
+- Regex Parsing → Structured Song List  
+- Spotify Search → Track IDs  
+- Playlist API → Final Playlist  
+
+## API Endpoint
+
+```python
+POST /generate_playlist

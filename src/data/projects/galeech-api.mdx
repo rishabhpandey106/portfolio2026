@@ -1,0 +1,47 @@
+---
+title: 'Galeech API'
+description: 'Serverless profanity detection API powered by machine learning for real-time content moderation.'
+image: '/project/galeechapi.png'
+technologies:
+  ['Python', 'FastAPI', 'Next.js', 'TensorFlow', 'Cloudflare', 'Vercel', 'Serverless', 'REST API']
+github: 'https://github.com/yourusername/profanity-api'
+live: 'https://your-api-domain.com/'
+timeline: '1-2 Days'
+role: 'Full Stack Developer'
+team: 'Solo'
+status: 'Completed'
+featured: true
+challenges:
+  ['Real-time Text Processing', 'Model Optimization', 'Serverless Deployment', 'Latency Reduction']
+learnings: ['ML Model Integration', 'Serverless Architecture', 'API Optimization', 'Content Moderation Systems']
+isPublished: true
+---
+
+## Overview
+
+The **Profanity Detection API** is a scalable SaaS-based content moderation system designed to detect and filter inappropriate language in real-time. Built using FastAPI and powered by TensorFlow, the API enables developers to integrate profanity detection seamlessly into their applications.
+
+Deployed on a serverless architecture using Cloudflare and Vercel, the system ensures low latency, high availability, and global scalability.
+
+## Key Features
+
+### **Core Functionalities**
+
+- **Profanity Detection**: Identify offensive or inappropriate words in text
+- **Text Classification**: Categorize content based on severity levels
+- **Real-time Processing**: Fast response times for live applications
+- **Custom Word Filtering**: Extendable profanity word lists
+- **Batch Processing**: Analyze multiple text inputs in a single request
+- **Confidence Scores**: Get probability scores for predictions
+- **Language Support**: Basic multi-language detection (extendable)
+
+## API Endpoints
+
+### **Core Endpoints**
+
+```typescript
+// Health check
+GET /health - Check API status
+
+// Main detection endpoint
+POST / - Analyze text for profanity
