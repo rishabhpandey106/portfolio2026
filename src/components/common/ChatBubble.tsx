@@ -142,7 +142,7 @@ const ChatBubble: React.FC = () => {
 
   const sendMessage = async (messageText: string, botMessageId: number) => {
     try {
-      const response = await fetch(`${process.env.CHAT_URL}/chat`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_CHAT_URL}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ const ChatBubble: React.FC = () => {
 
       // 🔊 Play audio if available
       if (data.audio_url) {
-        const audio = new Audio(`${process.env.CHAT_URL}${data.audio_url}`);
+        const audio = new Audio(`${process.env.NEXT_PUBLIC_CHAT_URL}${data.audio_url}`);
         audio.play().catch(() => { });
       }
 
