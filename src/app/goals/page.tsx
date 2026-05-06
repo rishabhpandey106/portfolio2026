@@ -1,62 +1,3 @@
-// import { BlogComponents } from '@/components/blog/BlogComponents';
-// import Container from '@/components/common/Container';
-// import { Separator } from '@/components/ui/separator';
-// import { generateMetadata as getMetadata } from '@/config/Meta';
-// import { getGoalsContent } from '@/lib/goals';
-// import { Metadata } from 'next';
-// import { MDXRemote } from 'next-mdx-remote/rsc';
-// import React from 'react';
-
-// export const metadata: Metadata = {
-//     ...getMetadata('/goals'),
-//     robots: { index: true, follow: true },
-// };
-
-// export default function GoalsPage() {
-//     const data = getGoalsContent();
-
-//     if (!data) {
-//         return (
-//             <Container className="py-16">
-//                 <div className="space-y-8">
-//                     <div className="space-y-4 text-center">
-//                         <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-//                             My Goals Before 30
-//                         </h1>
-//                         <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-//                             No goals found. Add `src/data/goals/goals.mdx`
-//                         </p>
-//                     </div>
-//                     <Separator />
-//                 </div>
-//             </Container>
-//         );
-//     }
-
-//     return (
-//         <Container className="py-16">
-//             <div className="space-y-8">
-//                 <div className="space-y-4 text-center">
-//                     <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-//                         My Top 30 Goals Before 30
-//                     </h1>
-//                     <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-//                         Things I want to achieve before turning 30.
-//                     </p>
-//                 </div>
-
-//                 <Separator />
-
-//                 <div className="rounded-xl border bg-background/40 p-6 md:p-8 shadow-sm">
-//                     <div className="prose prose-neutral dark:prose-invert max-w-none prose-li:marker:text-primary prose-li:leading-relaxed">
-//                         <MDXRemote source={data.content} components={BlogComponents} />
-//                     </div>
-//                 </div>
-//             </div>
-//         </Container>
-//     );
-// }
-
 import { BlogComponents } from '@/components/blog/BlogComponents';
 import Container from '@/components/common/Container';
 import { Separator } from '@/components/ui/separator';
@@ -67,8 +8,18 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import React from 'react';
 
 export const metadata: Metadata = {
-    ...getMetadata('/goals'),
-    robots: { index: true, follow: true },
+  ...getMetadata('/goals'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function GoalsPage() {

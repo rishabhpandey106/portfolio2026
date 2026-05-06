@@ -130,7 +130,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
 
   // Gears page
-  '/goal': {
+  '/goals': {
     title: 'Goal - My top goals',
     description:
       'My top 30 goal until i turn 30',

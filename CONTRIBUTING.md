@@ -11,7 +11,7 @@ sleek-portfolio/
 │   ├── blog/           # Blog post images
 │   ├── company/        # Company logos
 │   ├── meta/          # Meta images
-│   ├── project/       # Project thumbnails
+│   ├── project/       # Project thumbnails 
 │   ├── setup/         # Setup related files
 │   └── skills/        # Skill icons
 ├── src/
@@ -164,6 +164,7 @@ const Button = ({
 
 ### Projects
 
+- [Mockup Generator Free](https://previewed.app/editor/2D)
 - Place MDX files in `src/data/projects/`
 - Use kebab-case for file names: `my-project.mdx`
 - Include required frontmatter:
